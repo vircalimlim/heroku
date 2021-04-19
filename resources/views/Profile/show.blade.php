@@ -2,7 +2,9 @@
 @section('content')
 
 <h3>{{$profile->lastname}}</h3>
-@if(!$work)
+@if(!$work) 
+<!-- if($work || $student) -->
+
 <form method="POST" action="/work/{{$profile->id}}">
   @csrf
   <div class="row my-4">
@@ -36,6 +38,14 @@
   
 </form>
 @else
+{{$profile->work}}
 <span>Display dara of work</span>
+<select-option>
+  
+    <template v-slot:work> <h1>Work</h1> </template>
+
+    <template v-slot:student> <h1>Student</h1> </template>
+
+</select-option>
 @endif
 @endsection
