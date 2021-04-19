@@ -150,6 +150,12 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+      'houseNum' => 'Household Number',
+      'firstname' => 'First Name',
+      'middlename' => 'Middle Name',
+      'lastname' => 'Last Name'
+      
+      ],
 
 ];

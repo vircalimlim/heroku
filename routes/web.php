@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WorkController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('/profile', [ProfileController::class, 'index']);
+Route::get('/profile/create', [ProfileController:: class, 'create']);
+Route::post('/profile', [ProfileController::class, 'store']);
+Route::get('/profile/{profile}', [ProfileController::class, 'show']);
+
+Route::post('/work/{profile}', [WorkController::class, 'store']);
