@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WorkController;
+use App\Http\Controllers\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +29,4 @@ Route::post('/profile', [ProfileController::class, 'store']);
 Route::get('/profile/{profile}', [ProfileController::class, 'show']);
 
 Route::post('/work/{profile}', [WorkController::class, 'store']);
+Route::post('/student/{profile}', [StudentController::class, 'store']);

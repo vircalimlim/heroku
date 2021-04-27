@@ -5,7 +5,9 @@
 @if(!$work) 
 <!-- if($work || $student) -->
 
-<form method="POST" action="/work/{{$profile->id}}">
+<select-option profileid="{{$profile->id}}">
+  
+  <template v-slot:work>
   @csrf
   <div class="row my-4">
     <div class="col-12 my-2">
@@ -30,22 +32,38 @@
     </div>
   </div>
   
+  </template>
+  
+  <template v-slot:student>
+    @csrf
+    
   <div class="row my-4">
-    <div class="col-12 text-right">
-      <button type="Submit" class="btn btn-dark">Submit</button>
+    <div class="col-12 my-2">
+      <span>Name of School</span>
+    </div>
+    <div class="col-12">
+      <input class="form-control @error('school') is-invalid @enderror" type="text" name="school" value="{{ old('school') }}" autocomplete="off" autofocus/>
+      @error('school')
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $message }}</strong>
+      </span>
+      @enderror
     </div>
   </div>
   
-</form>
+  <educ-level>
+
+  </educ-level>
+  
+
+  
+  </template>
+</select-option>
+
 @else
 {{$profile->work}}
 <span>Display dara of work</span>
-<select-option>
-  
-    <template v-slot:work> <h1>Work</h1> </template>
 
-    <template v-slot:student> <h1>Student</h1> </template>
 
-</select-option>
 @endif
 @endsection
