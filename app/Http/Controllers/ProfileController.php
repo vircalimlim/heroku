@@ -7,6 +7,7 @@ use App\Models\Work;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
+
 class ProfileController extends Controller
 {
     /**
@@ -39,7 +40,8 @@ class ProfileController extends Controller
     public function store(Request $request)
     {
       try{
-         $data = request()->validate([
+         
+        $data = request()->validate([
           'houseNum' => 'required|numeric',
           'firstname' => 'required|string|max:150|min:2',
           'middlename' => 'required|max:150',
@@ -47,11 +49,12 @@ class ProfileController extends Controller
           ]);
           
         Profile::create($data);
+        return ['success'    => 'success'];
       }
       catch(ValidationException $exception){
-        dd($exception->errors());
+        return $exception->errors();
       }
-        return redirect()->back();
+        //return redirect()->back();
     }
 
     /**
