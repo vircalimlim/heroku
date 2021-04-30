@@ -2251,6 +2251,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['profileid'],
   data: function data() {
@@ -38277,192 +38296,203 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "px-3 py-5" }, [
     _c("div", { staticClass: "row mt-md-5 py-2 justify-content-around" }, [
-      _c("div", { staticClass: "col-12 col-md-8 col-lg-7" }, [
-        _c("h3", [_vm._v("Create Profile")]),
-        _vm._v(" "),
-        _c(
-          "form",
-          {
-            attrs: { method: "POST", action: "/profile" },
-            on: {
-              submit: function($event) {
-                $event.preventDefault()
-                return _vm.submit($event)
+      _c(
+        "div",
+        {
+          staticClass:
+            "py-4 px-4 text-light rounded shadow-lg bg-dark col-12 col-md-8 col-lg-7"
+        },
+        [
+          _c("h3", { staticClass: "text-center" }, [_vm._v("Create Profile")]),
+          _vm._v(" "),
+          _c(
+            "form",
+            {
+              attrs: { method: "POST", action: "/profile" },
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.submit($event)
+                }
               }
-            }
-          },
-          [
-            _c("input", {
-              attrs: { type: "hidden", name: "_token" },
-              domProps: { value: _vm.csrf }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "row my-4" }, [
-              _vm._m(0),
+            },
+            [
+              _c("input", {
+                attrs: { type: "hidden", name: "_token" },
+                domProps: { value: _vm.csrf }
+              }),
               _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-sm-12 col-md-9" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.houseNum,
-                      expression: "houseNum"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    name: "houseNum",
-                    autocomplete: "houseNum"
-                  },
-                  domProps: { value: _vm.houseNum },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.houseNum = $event.target.value
-                    }
-                  }
-                }),
+              _c("div", { staticClass: "row my-4" }, [
+                _vm._m(0),
                 _vm._v(" "),
-                _vm.status.houseNum
-                  ? _c("div", { staticClass: "text-danger" }, [
-                      _c("small", [
-                        _vm._v(" " + _vm._s(_vm.status.houseNum[0]))
+                _c("div", { staticClass: "col-12 col-sm-12 col-md-9" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.houseNum,
+                        expression: "houseNum"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      placeholder: "House Number",
+                      type: "text",
+                      name: "houseNum",
+                      autocomplete: "houseNum"
+                    },
+                    domProps: { value: _vm.houseNum },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.houseNum = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.status.houseNum
+                    ? _c("div", { staticClass: "text-danger" }, [
+                        _c("small", [
+                          _vm._v(" " + _vm._s(_vm.status.houseNum[0]))
+                        ])
                       ])
-                    ])
-                  : _vm._e()
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row my-4" }, [
-              _vm._m(1),
+                    : _vm._e()
+                ])
+              ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-sm-12 col-md-9" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.firstname,
-                      expression: "firstname"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    name: "firstname",
-                    autocomplete: "firstname"
-                  },
-                  domProps: { value: _vm.firstname },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.firstname = $event.target.value
-                    }
-                  }
-                }),
+              _c("div", { staticClass: "row my-4" }, [
+                _vm._m(1),
                 _vm._v(" "),
-                _vm.status.firstname
-                  ? _c("div", { staticClass: "text-danger" }, [
-                      _c("small", [
-                        _vm._v(" " + _vm._s(_vm.status.firstname[0]))
+                _c("div", { staticClass: "col-12 col-sm-12 col-md-9" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.firstname,
+                        expression: "firstname"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      placeholder: "First Name",
+                      type: "text",
+                      name: "firstname",
+                      autocomplete: "firstname"
+                    },
+                    domProps: { value: _vm.firstname },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.firstname = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.status.firstname
+                    ? _c("div", { staticClass: "text-danger" }, [
+                        _c("small", [
+                          _vm._v(" " + _vm._s(_vm.status.firstname[0]))
+                        ])
                       ])
-                    ])
-                  : _vm._e()
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row my-4" }, [
-              _vm._m(2),
+                    : _vm._e()
+                ])
+              ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-sm-12 col-md-9" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.middlename,
-                      expression: "middlename"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    name: "middlename",
-                    autocomplete: "middlename"
-                  },
-                  domProps: { value: _vm.middlename },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.middlename = $event.target.value
-                    }
-                  }
-                }),
+              _c("div", { staticClass: "row my-4" }, [
+                _vm._m(2),
                 _vm._v(" "),
-                _vm.status.middlename
-                  ? _c("div", { staticClass: "text-danger" }, [
-                      _c("small", [
-                        _vm._v(" " + _vm._s(_vm.status.middlename[0]))
+                _c("div", { staticClass: "col-12 col-sm-12 col-md-9" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.middlename,
+                        expression: "middlename"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      placeholder: "Middle Name",
+                      type: "text",
+                      name: "middlename",
+                      autocomplete: "middlename"
+                    },
+                    domProps: { value: _vm.middlename },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.middlename = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.status.middlename
+                    ? _c("div", { staticClass: "text-danger" }, [
+                        _c("small", [
+                          _vm._v(" " + _vm._s(_vm.status.middlename[0]))
+                        ])
                       ])
-                    ])
-                  : _vm._e()
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row my-4" }, [
-              _vm._m(3),
+                    : _vm._e()
+                ])
+              ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-sm-12 col-md-9" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.lastname,
-                      expression: "lastname"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    name: "lastname",
-                    autocomplete: "lastname"
-                  },
-                  domProps: { value: _vm.lastname },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.lastname = $event.target.value
-                    }
-                  }
-                }),
+              _c("div", { staticClass: "row my-4" }, [
+                _vm._m(3),
                 _vm._v(" "),
-                _vm.status.lastname
-                  ? _c("div", { staticClass: "text-danger" }, [
-                      _c("small", [
-                        _vm._v(" " + _vm._s(_vm.status.lastname[0]))
+                _c("div", { staticClass: "col-12 col-sm-12 col-md-9" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.lastname,
+                        expression: "lastname"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      placeholder: "Last Name",
+                      type: "text",
+                      name: "lastname",
+                      autocomplete: "lastname"
+                    },
+                    domProps: { value: _vm.lastname },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.lastname = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.status.lastname
+                    ? _c("div", { staticClass: "text-danger" }, [
+                        _c("small", [
+                          _vm._v(" " + _vm._s(_vm.status.lastname[0]))
+                        ])
                       ])
-                    ])
-                  : _vm._e()
-              ])
-            ]),
-            _vm._v(" "),
-            _vm._m(4)
-          ]
-        )
-      ])
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(4)
+            ]
+          )
+        ]
+      )
     ])
   ])
 }
@@ -38515,7 +38545,10 @@ var staticRenderFns = [
       _c("div", { staticClass: "col text-right" }, [
         _c(
           "button",
-          { staticClass: "btn btn-dark", attrs: { type: "submit" } },
+          {
+            staticClass: "font-weight-bold btn btn-outline-primary",
+            attrs: { type: "submit" }
+          },
           [_vm._v("Submit")]
         )
       ])
@@ -38544,197 +38577,43 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "form",
-      {
-        attrs: {
-          method: "POST",
-          action: "/" + _vm.selected + "/" + _vm.profileid
+  return _c("div", { staticClass: "px-3 py-5" }, [
+    _c("div", { staticClass: "row mt-md-5 py-2 justify-content-around" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "py-4 px-4 text-light rounded shadow-lg bg-dark col-12 col-md-8 col-lg-7"
         },
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            return _vm.validateData($event)
-          }
-        }
-      },
-      [
-        _c("input", {
-          attrs: { type: "hidden", name: "_token" },
-          domProps: { value: _vm.csrf }
-        }),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.selected,
-                expression: "selected"
+        [
+          _c("h3", { staticClass: "text-center pb-3" }, [
+            _vm._v("Create Additional Information")
+          ]),
+          _vm._v(" "),
+          _c(
+            "form",
+            {
+              attrs: {
+                method: "POST",
+                action: "/" + _vm.selected + "/" + _vm.profileid
+              },
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.validateData($event)
+                }
               }
-            ],
-            staticClass: "form-control",
-            on: {
-              change: function($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function(o) {
-                    return o.selected
-                  })
-                  .map(function(o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.selected = $event.target.multiple
-                  ? $$selectedVal
-                  : $$selectedVal[0]
-              }
-            }
-          },
-          [
-            _c("option", { attrs: { value: "work" } }, [
-              _vm._v("Working/Employed")
-            ]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "student" } }, [_vm._v("Student")])
-          ]
-        ),
-        _vm._v(" "),
-        _vm.selected == "work"
-          ? _c("div", [
+            },
+            [
+              _c("input", {
+                attrs: { type: "hidden", name: "_token" },
+                domProps: { value: _vm.csrf }
+              }),
+              _vm._v(" "),
               _c("div", { staticClass: "row my-4" }, [
                 _vm._m(0),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-12" }, [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.profession,
-                        expression: "profession"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    class: { "is-invalid": _vm.data.profession },
-                    attrs: {
-                      type: "text",
-                      name: "profession",
-                      autocomplete: "off",
-                      autofocus: ""
-                    },
-                    domProps: { value: _vm.profession },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.profession = $event.target.value
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.data.profession
-                    ? _c("div", { staticClass: "text-danger" }, [
-                        _c("small", [
-                          _vm._v(" " + _vm._s(_vm.data.profession[0]))
-                        ])
-                      ])
-                    : _vm._e()
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row my-4" }, [
-                _vm._m(1),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-12" }, [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.workplace,
-                        expression: "workplace"
-                      }
-                    ],
-                    staticClass: "form-control ",
-                    class: { "is-invalid": _vm.data.workplace },
-                    attrs: {
-                      type: "text",
-                      name: "workplace",
-                      autocomplete: "off",
-                      autofocus: ""
-                    },
-                    domProps: { value: _vm.workplace },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.workplace = $event.target.value
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.data.workplace
-                    ? _c("div", { staticClass: "text-danger" }, [
-                        _c("small", [
-                          _vm._v(" " + _vm._s(_vm.data.workplace[0]))
-                        ])
-                      ])
-                    : _vm._e()
-                ])
-              ])
-            ])
-          : _vm.selected == "student"
-          ? _c("div", {}, [
-              _c("div", { staticClass: "row my-4" }, [
-                _vm._m(2),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-12" }, [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.school,
-                        expression: "school"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    class: { "is-invalid": _vm.data.school },
-                    attrs: {
-                      type: "text",
-                      name: "school",
-                      value: "",
-                      autocomplete: "off",
-                      autofocus: ""
-                    },
-                    domProps: { value: _vm.school },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.school = $event.target.value
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.data.school
-                    ? _c("div", { staticClass: "text-danger" }, [
-                        _c("small", [_vm._v(" " + _vm._s(_vm.data.school[0]))])
-                      ])
-                    : _vm._e()
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row my-4" }, [
-                _vm._m(3),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-12" }, [
+                _c("div", { staticClass: "col-12 col-sm-12 col-md-8" }, [
                   _c(
                     "select",
                     {
@@ -38742,64 +38621,175 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.educ_level,
-                          expression: "educ_level"
+                          value: _vm.selected,
+                          expression: "selected"
                         }
                       ],
                       staticClass: "form-control",
-                      attrs: { name: "educ_level" },
                       on: {
-                        change: [
-                          function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.educ_level = $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          },
-                          function($event) {
-                            _vm.year_level = " "
-                          }
-                        ]
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.selected = $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        }
                       }
                     },
                     [
-                      _c("option", { attrs: { value: "elementary" } }, [
-                        _vm._v("\n        Elementary\n      ")
+                      _c("option", { attrs: { value: "work" } }, [
+                        _vm._v("Working/Employed")
                       ]),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "highschool" } }, [
-                        _vm._v("\n        High School\n      ")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "college" } }, [
-                        _vm._v("\n        College\n      ")
+                      _c("option", { attrs: { value: "student" } }, [
+                        _vm._v("Student")
                       ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  _vm.data.educ_level
-                    ? _c("div", { staticClass: "text-danger" }, [
-                        _c("small", [
-                          _vm._v(" " + _vm._s(_vm.data.educ_level[0]))
-                        ])
-                      ])
-                    : _vm._e()
+                  )
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "row my-4" }, [
-                _vm._m(4),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-12" }, [
-                  _vm.educ_level == "elementary"
-                    ? _c("div", [
+              _vm.selected == "work"
+                ? _c("div", [
+                    _c("div", { staticClass: "row my-4" }, [
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-12 col-sm-12 col-md-8" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.profession,
+                              expression: "profession"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: { "is-invalid": _vm.data.profession },
+                          attrs: {
+                            type: "text",
+                            name: "profession",
+                            autocomplete: "off",
+                            autofocus: ""
+                          },
+                          domProps: { value: _vm.profession },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.profession = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _vm.data.profession
+                          ? _c("div", { staticClass: "text-danger" }, [
+                              _c("small", [
+                                _vm._v(" " + _vm._s(_vm.data.profession[0]))
+                              ])
+                            ])
+                          : _vm._e()
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row my-4" }, [
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-12 col-sm-12 col-md-8" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.workplace,
+                              expression: "workplace"
+                            }
+                          ],
+                          staticClass: "form-control ",
+                          class: { "is-invalid": _vm.data.workplace },
+                          attrs: {
+                            type: "text",
+                            name: "workplace",
+                            autocomplete: "off",
+                            autofocus: ""
+                          },
+                          domProps: { value: _vm.workplace },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.workplace = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _vm.data.workplace
+                          ? _c("div", { staticClass: "text-danger" }, [
+                              _c("small", [
+                                _vm._v(" " + _vm._s(_vm.data.workplace[0]))
+                              ])
+                            ])
+                          : _vm._e()
+                      ])
+                    ])
+                  ])
+                : _vm.selected == "student"
+                ? _c("div", {}, [
+                    _c("div", { staticClass: "row my-4" }, [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-12 col-sm-12 col-md-8" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.school,
+                              expression: "school"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: { "is-invalid": _vm.data.school },
+                          attrs: {
+                            type: "text",
+                            name: "school",
+                            value: "",
+                            autocomplete: "off",
+                            autofocus: ""
+                          },
+                          domProps: { value: _vm.school },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.school = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _vm.data.school
+                          ? _c("div", { staticClass: "text-danger" }, [
+                              _c("small", [
+                                _vm._v(" " + _vm._s(_vm.data.school[0]))
+                              ])
+                            ])
+                          : _vm._e()
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row my-4" }, [
+                      _vm._m(4),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-12 col-sm-12 col-md-8" }, [
                         _c(
                           "select",
                           {
@@ -38807,163 +38797,241 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.year_level,
-                                expression: "year_level"
+                                value: _vm.educ_level,
+                                expression: "educ_level"
                               }
                             ],
                             staticClass: "form-control",
-                            attrs: { name: "year_level" },
+                            attrs: { name: "educ_level" },
                             on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.year_level = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
+                              change: [
+                                function($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function(o) {
+                                      return o.selected
+                                    })
+                                    .map(function(o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.educ_level = $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                },
+                                function($event) {
+                                  _vm.year_level = " "
+                                }
+                              ]
                             }
                           },
                           [
-                            _c(
-                              "option",
-                              { attrs: { value: " ", selected: "" } },
-                              [_vm._v("Choose options")]
-                            ),
+                            _c("option", { attrs: { value: "elementary" } }, [
+                              _vm._v("\n          Elementary\n        ")
+                            ]),
                             _vm._v(" "),
-                            _vm._l(_vm.elem, function(item) {
-                              return _c(
-                                "option",
-                                { domProps: { value: item } },
-                                [_vm._v(_vm._s(item))]
-                              )
-                            })
-                          ],
-                          2
-                        )
-                      ])
-                    : _vm.educ_level == "highschool"
-                    ? _c("div", [
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.year_level,
-                                expression: "year_level"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: { name: "year_level" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.year_level = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c(
-                              "option",
-                              { attrs: { value: " ", selected: "" } },
-                              [_vm._v("Choose options")]
-                            ),
+                            _c("option", { attrs: { value: "highschool" } }, [
+                              _vm._v("\n          High School\n        ")
+                            ]),
                             _vm._v(" "),
-                            _vm._l(_vm.highschool, function(item) {
-                              return _c(
-                                "option",
-                                { domProps: { value: item } },
-                                [_vm._v(_vm._s(item))]
-                              )
-                            })
-                          ],
-                          2
-                        )
+                            _c("option", { attrs: { value: "college" } }, [
+                              _vm._v("\n          College\n        ")
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm.data.educ_level
+                          ? _c("div", { staticClass: "text-danger" }, [
+                              _c("small", [
+                                _vm._v(" " + _vm._s(_vm.data.educ_level[0]))
+                              ])
+                            ])
+                          : _vm._e()
                       ])
-                    : _vm.educ_level == "college"
-                    ? _c("div", [
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.year_level,
-                                expression: "year_level"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: { name: "year_level" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row my-4" }, [
+                      _vm._m(5),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-12 col-sm-12 col-md-8" }, [
+                        _vm.educ_level == "elementary"
+                          ? _c("div", [
+                              _c(
+                                "select",
+                                {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.year_level,
+                                      expression: "year_level"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: { name: "year_level" },
+                                  on: {
+                                    change: function($event) {
+                                      var $$selectedVal = Array.prototype.filter
+                                        .call($event.target.options, function(
+                                          o
+                                        ) {
+                                          return o.selected
+                                        })
+                                        .map(function(o) {
+                                          var val =
+                                            "_value" in o ? o._value : o.value
+                                          return val
+                                        })
+                                      _vm.year_level = $event.target.multiple
+                                        ? $$selectedVal
+                                        : $$selectedVal[0]
+                                    }
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "option",
+                                    { attrs: { value: " ", selected: "" } },
+                                    [_vm._v("Choose options")]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._l(_vm.elem, function(item) {
+                                    return _c(
+                                      "option",
+                                      { domProps: { value: item } },
+                                      [_vm._v(_vm._s(item))]
+                                    )
                                   })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.year_level = $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              }
-                            }
-                          },
-                          [
-                            _c(
-                              "option",
-                              { attrs: { value: " ", selected: "" } },
-                              [_vm._v("Choose options")]
-                            ),
-                            _vm._v(" "),
-                            _vm._l(_vm.college, function(item) {
-                              return _c(
-                                "option",
-                                { domProps: { value: item } },
-                                [_vm._v(_vm._s(item))]
+                                ],
+                                2
                               )
-                            })
-                          ],
-                          2
-                        )
+                            ])
+                          : _vm.educ_level == "highschool"
+                          ? _c("div", [
+                              _c(
+                                "select",
+                                {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.year_level,
+                                      expression: "year_level"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: { name: "year_level" },
+                                  on: {
+                                    change: function($event) {
+                                      var $$selectedVal = Array.prototype.filter
+                                        .call($event.target.options, function(
+                                          o
+                                        ) {
+                                          return o.selected
+                                        })
+                                        .map(function(o) {
+                                          var val =
+                                            "_value" in o ? o._value : o.value
+                                          return val
+                                        })
+                                      _vm.year_level = $event.target.multiple
+                                        ? $$selectedVal
+                                        : $$selectedVal[0]
+                                    }
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "option",
+                                    { attrs: { value: " ", selected: "" } },
+                                    [_vm._v("Choose options")]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._l(_vm.highschool, function(item) {
+                                    return _c(
+                                      "option",
+                                      { domProps: { value: item } },
+                                      [_vm._v(_vm._s(item))]
+                                    )
+                                  })
+                                ],
+                                2
+                              )
+                            ])
+                          : _vm.educ_level == "college"
+                          ? _c("div", [
+                              _c(
+                                "select",
+                                {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.year_level,
+                                      expression: "year_level"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: { name: "year_level" },
+                                  on: {
+                                    change: function($event) {
+                                      var $$selectedVal = Array.prototype.filter
+                                        .call($event.target.options, function(
+                                          o
+                                        ) {
+                                          return o.selected
+                                        })
+                                        .map(function(o) {
+                                          var val =
+                                            "_value" in o ? o._value : o.value
+                                          return val
+                                        })
+                                      _vm.year_level = $event.target.multiple
+                                        ? $$selectedVal
+                                        : $$selectedVal[0]
+                                    }
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "option",
+                                    { attrs: { value: " ", selected: "" } },
+                                    [_vm._v("Choose options")]
+                                  ),
+                                  _vm._v(" "),
+                                  _vm._l(_vm.college, function(item) {
+                                    return _c(
+                                      "option",
+                                      { domProps: { value: item } },
+                                      [_vm._v(_vm._s(item))]
+                                    )
+                                  })
+                                ],
+                                2
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.data.year_level
+                          ? _c("div", { staticClass: "text-danger" }, [
+                              _c("small", [
+                                _vm._v(" " + _vm._s(_vm.data.year_level[0]))
+                              ])
+                            ])
+                          : _vm._e()
                       ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.data.year_level
-                    ? _c("div", { staticClass: "text-danger" }, [
-                        _c("small", [
-                          _vm._v(" " + _vm._s(_vm.data.year_level[0]))
-                        ])
-                      ])
-                    : _vm._e()
-                ])
-              ])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        _vm._m(5),
-        _vm._v(" "),
-        _vm.data ? _c("div", [_vm._m(6)]) : _vm._e()
-      ]
-    )
+                    ])
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm._m(6),
+              _vm._v(" "),
+              _vm.data ? _c("div", [_vm._m(7)]) : _vm._e()
+            ]
+          )
+        ]
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -38971,7 +39039,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 my-2" }, [
+    return _c("div", { staticClass: "col-12 col-sm-12 col-md-4 my-2" }, [
+      _c("span", [_vm._v("Status")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 col-sm-12 col-md-4 my-2" }, [
       _c("span", [_vm._v("Profession/Work")])
     ])
   },
@@ -38979,7 +39055,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 my-2" }, [
+    return _c("div", { staticClass: "col-12 col-sm-12 col-md-4 my-2" }, [
       _c("span", [_vm._v("Workplace")])
     ])
   },
@@ -38987,7 +39063,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 my-2" }, [
+    return _c("div", { staticClass: "col-12 col-sm-12 col-md-4 my-2" }, [
       _c("span", [_vm._v("Name of School")])
     ])
   },
@@ -38995,7 +39071,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 my-2" }, [
+    return _c("div", { staticClass: "col-12 col-sm-12 col-md-4 my-2" }, [
       _c("span", [_vm._v("Education Level")])
     ])
   },
@@ -39003,7 +39079,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 my-2" }, [
+    return _c("div", { staticClass: "col-12 col-sm-12 col-md-4 my-2" }, [
       _c("span", [_vm._v("Year Level")])
     ])
   },
@@ -39015,7 +39091,10 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-12 text-right" }, [
         _c(
           "button",
-          { staticClass: "btn btn-dark", attrs: { type: "Submit" } },
+          {
+            staticClass: "font-weight-bold btn btn-outline-primary",
+            attrs: { type: "Submit" }
+          },
           [_vm._v("Submit")]
         )
       ])

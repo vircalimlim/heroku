@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="px-3 py-5">
 
 <div class="row mt-md-5 py-2 justify-content-around">
-<div class="col-12 col-md-8 col-lg-7">
+<div class="py-4 px-4 text-light rounded shadow-lg bg-dark col-12 col-md-8 col-lg-7">
   
-<h3>Create Profile</h3>
+<h3 class="text-center">Create Profile</h3>
 
 <form method="POST" action="/profile" @submit.prevent="submit">
   <input type="hidden" name="_token" :value="csrf">
@@ -16,7 +16,7 @@
   </div>
   
   <div class="col-12 col-sm-12 col-md-9">
-  <input v-model="houseNum" class="form-control" type="text" name="houseNum" autocomplete="houseNum"/>
+  <input placeholder="House Number" v-model="houseNum" class="form-control" type="text" name="houseNum" autocomplete="houseNum"/>
     <div class="text-danger" v-if="status.houseNum">
         <small> {{status.houseNum[0]}}</small>
     </div>
@@ -31,7 +31,7 @@
   </div>
   
   <div class="col-12 col-sm-12 col-md-9">
-  <input v-model="firstname" class="form-control" type="text" name="firstname" autocomplete="firstname"/>
+  <input placeholder="First Name" v-model="firstname" class="form-control" type="text" name="firstname" autocomplete="firstname"/>
     <div class="text-danger" v-if="status.firstname">
         <small> {{status.firstname[0]}}</small>
     </div>
@@ -46,7 +46,7 @@
   </div>
   
   <div class="col-12 col-sm-12 col-md-9">
-  <input v-model="middlename" class="form-control" type="text" name="middlename" autocomplete="middlename"/>
+  <input placeholder="Middle Name" v-model="middlename" class="form-control" type="text" name="middlename" autocomplete="middlename"/>
     <div class="text-danger" v-if="status.middlename">
         <small> {{status.middlename[0]}}</small>
     </div>
@@ -61,7 +61,7 @@
   </div>
   
   <div class="col-12 col-sm-12 col-md-9">
-  <input v-model="lastname" class="form-control" type="text" name="lastname" autocomplete="lastname"/>
+  <input placeholder="Last Name" v-model="lastname" class="form-control" type="text" name="lastname" autocomplete="lastname"/>
     <div class="text-danger" v-if="status.lastname">
         <small> {{status.lastname[0]}}</small>
     </div>
@@ -74,7 +74,7 @@
 
 <div class="row">
   <div class="col text-right">
-  <button type="submit" class="btn btn-dark">Submit</button>
+  <button type="submit" class="font-weight-bold btn btn-outline-primary">Submit</button>
   </div>
 </div>
 

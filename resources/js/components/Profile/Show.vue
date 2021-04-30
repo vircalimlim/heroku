@@ -1,22 +1,38 @@
 <template>
-  <div>
+  <div class="px-3 py-5">
+
+<div class="row mt-md-5 py-2 justify-content-around">
+<div class="py-4 px-4 text-light rounded shadow-lg bg-dark col-12 col-md-8 col-lg-7">
+
+<h3 class="text-center pb-3">Create Additional Information</h3>
+
   <form @submit.prevent="validateData" method="POST" :action="'/' + selected + '/' + profileid">
   <input type="hidden" name="_token" :value="csrf">
 
+    <div class="row my-4">
+
+    <div class="col-12 col-sm-12 col-md-4 my-2">
+      <span>Status</span>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-8">
     <select class="form-control" v-model="selected">
       <option value="work">Working/Employed</option>
       <option value="student">Student</option>
     </select>
+    </div>
+
+    </div>
     
     <div v-if="selected == 'work' ">
 
     <div class="row my-4">
 
-    <div class="col-12 my-2">
+    <div class="col-12 col-sm-12 col-md-4 my-2">
       <span>Profession/Work</span>
     </div>
 
-    <div class="col-12">
+    <div class="col-12 col-sm-12 col-md-8">
       <input :class="{'is-invalid': data.profession}" class="form-control" type="text" v-model="profession" name="profession" autocomplete="off" autofocus/>
       <div class="text-danger" v-if="data.profession">
         <small> {{data.profession[0]}}</small>
@@ -26,10 +42,10 @@
   </div>
   
   <div class="row my-4">
-    <div class="col-12 my-2">
+    <div class="col-12 col-sm-12 col-md-4 my-2">
       <span>Workplace</span>
     </div>
-    <div class="col-12">
+    <div class="col-12 col-sm-12 col-md-8">
       <input :class="{'is-invalid': data.workplace}" class="form-control " type="text" v-model="workplace" name="workplace" autocomplete="off" autofocus/>
       <div class="text-danger" v-if="data.workplace">
         <small> {{data.workplace[0]}}</small>
@@ -42,10 +58,10 @@
     <div class="" v-else-if="selected == 'student'">
       
       <div class="row my-4">
-    <div class="col-12 my-2">
+    <div class="col-12 col-sm-12 col-md-4 my-2">
       <span>Name of School</span>
     </div>
-    <div class="col-12">
+    <div class="col-12 col-sm-12 col-md-8">
       <input :class="{'is-invalid': data.school}"  class="form-control" type="text" name="school" v-model="school" value="" autocomplete="off" autofocus/>
       <div class="text-danger" v-if="data.school">
         <small> {{data.school[0]}}</small>
@@ -55,10 +71,10 @@
   </div>
   
   <div class="row my-4">
-    <div class="col-12 my-2">
+    <div class="col-12 col-sm-12 col-md-4 my-2">
       <span>Education Level</span>
     </div>
-    <div class="col-12">
+    <div class="col-12 col-sm-12 col-md-8">
       <select @change="year_level = ' '" class="form-control" v-model="educ_level"  name="educ_level" >
         
         <option value="elementary">
@@ -82,10 +98,10 @@
   </div>
   
   <div class="row my-4">
-    <div class="col-12 my-2">
+    <div class="col-12 col-sm-12 col-md-4 my-2">
       <span>Year Level</span>
     </div>
-    <div class="col-12">
+    <div class="col-12 col-sm-12 col-md-8">
       
       <div v-if="educ_level == 'elementary'" >
         
@@ -123,7 +139,7 @@
     
   <div class="row my-4">
     <div class="col-12 text-right">
-      <button type="Submit" class="btn btn-dark">Submit</button>
+      <button type="Submit" class="font-weight-bold btn btn-outline-primary">Submit</button>
     </div>
   </div>
   <div v-if="data">
@@ -135,6 +151,9 @@
   
   </div>
   </form>
+
+</div>
+</div>
   </div>
 </template>
 

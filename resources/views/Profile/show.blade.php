@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<h3>{{$profile->lastname}}</h3>
+<!-- <h3>{{$profile->lastname}}</h3> -->
 @if(!$work) 
 <!-- if($work || $student) -->
 
