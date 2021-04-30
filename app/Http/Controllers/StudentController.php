@@ -51,7 +51,7 @@ class StudentController extends Controller
           'year_level' => ['required'],
           ]);
           $profile->student()->create($data);
-          return "success";
+          return ['success' => 'success'];
    }
    catch(ValidationException $exception){
      

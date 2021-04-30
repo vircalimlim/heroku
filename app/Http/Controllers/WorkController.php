@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Work;
 use App\Models\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class WorkController extends Controller
 {
@@ -34,16 +35,23 @@ class WorkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,Profile $profile)
+    public function store(Request $request, Profile $profile)
     {
-        $data = request()->validate([
+
+        try {
+
+            $data = request()->validate([
           
-          'profession' => 'required|string|max:200',
-          'workplace' => 'required|string|max:300'
-          ]);
-          
-          $profile->work()->create($data);
-          return back();
+                'profession' => 'required|string|max:200',
+                'workplace' => 'required|string|max:300'
+                ]);
+                
+                $profile->work()->create($data);
+               return ['success' => 'success'];
+        }
+        catch(ValidationException $exception){
+            return $exception->errors();
+        }
           
           
     }
