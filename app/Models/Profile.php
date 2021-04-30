@@ -14,4 +14,8 @@ class Profile extends Model
     public function work(){
       return $this->hasOne(Work::class);
     }
+    
+    public function student(){
+      return $this->hasOne(Student::class);
+    }
 }

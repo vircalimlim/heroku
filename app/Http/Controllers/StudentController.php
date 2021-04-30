@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Student;
 use App\Models\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class StudentController extends Controller
 {
@@ -36,14 +38,26 @@ class StudentController extends Controller
      */
     public function store(Request $request, Profile $profile)
     {
+     /* return request()->validate([
+        'educ_level' => ['required']
+      ]);*/
      // dd($profile);
-    // return "hello";
-        return $data = request()->validate([
-          'school' => ['required'],
+    //return "hello";
+   // return $profile->firstname;
+   try{
+         $data = request()->validate([
+          'school' => ['required', 'string'],
           'educ_level' => ['required'],
-          'year_level' => ['required']
+          'year_level' => ['required'],
           ]);
-          
+          $profile->student()->create($data);
+          return "success";
+   }
+   catch(ValidationException $exception){
+     
+          return $exception->errors();
+   }
+
     }
 
     /**

@@ -7,6 +7,7 @@
     </div>
     <div class="col-12">
       <select class="form-control" v-model="selecteditem"  name="educ_level" >
+        
         <option value="elementary">
           Elementary
         </option>
@@ -32,7 +33,7 @@
       <div v-if="selecteditem == 'elementary'" >
         
       <select class="form-control" name="year_level" > 
-        
+        <option value="" selected>Choose options</option>
         <option :value="item" v-for="item in elem">{{item}}</option>
     
       </select>

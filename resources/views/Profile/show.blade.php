@@ -34,30 +34,7 @@
   
   </template>
   
-  <template v-slot:student>
-    @csrf
-    
-  <div class="row my-4">
-    <div class="col-12 my-2">
-      <span>Name of School</span>
-    </div>
-    <div class="col-12">
-      <input class="form-control @error('school') is-invalid @enderror" type="text" name="school" value="{{ old('school') }}" autocomplete="off" autofocus/>
-      @error('school')
-      <span class="invalid-feedback" role="alert">
-        <strong>{{ $message }}</strong>
-      </span>
-      @enderror
-    </div>
-  </div>
-  
-  <educ-level>
 
-  </educ-level>
-  
-
-  
-  </template>
 </select-option>
 
 @else
