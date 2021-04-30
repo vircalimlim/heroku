@@ -30,3 +30,6 @@ Route::get('/profile/{profile}', [ProfileController::class, 'show']);
 
 Route::post('/work/{profile}', [WorkController::class, 'store']);
 Route::post('/student/{profile}', [StudentController::class, 'store']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
